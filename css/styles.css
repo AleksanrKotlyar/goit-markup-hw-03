@@ -6,6 +6,7 @@
 
   --accent-color-text: #ffffff;
   --accent-color-background: #2196f3;
+  --secondary-bgc: #f5f4fa;
 }
 
 body {
@@ -32,11 +33,24 @@ body {
 }
 
 /* обнуление дек. ссылок и списков + ховеры и фокусы*/
+
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0;
+  margin: 0;
+}
+
 .list,
 .link {
   list-style: none;
   text-decoration: none;
+  padding: 0;
+  margin: 0;
 }
+
 .link:hover,
 .link:focus {
   color: var(--accent-color-background);
@@ -48,6 +62,28 @@ body {
 .btn:focus {
   color: var(--accent-color-text);
   background-color: var(--accent-color-background);
+}
+
+/* Header */
+
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.current {
+  color: var(--accent-color-background);
+}
+.container {
+  display: flex;
+  align-items: center;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.nav {
+  display: flex;
+  align-items: center;
 }
 
 /* logo */
@@ -65,36 +101,67 @@ body {
 .logo-style-footer {
   color: var(--accent-color-text);
 }
+.nav > .nav-logo {
+  margin-right: 94px;
+}
 
-/* header */
 .nav-list-item {
+  margin-right: 50px;
+
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
-.current {
-  color: var(--accent-color-background);
+.nav-list-item.link,
+.contact-list-item.link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.contacts.list {
+  display: flex;
+  margin-left: auto;
 }
 .contact-list-item {
+  margin-right: 50px;
+
   color: currentColor;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.contact-list-item:last-child,
+.nav-list-item:last-child {
+  margin-right: 0;
+}
 
 /* main Студия */
 /* main Студия -Hero */
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
+
+  background-color: #2f303a;
+}
+
 .headline {
+  padding-right: 452px;
+  padding-left: 452px;
+
+  margin-bottom: 30px;
   color: var(--accent-color-text);
   text-transform: uppercase;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
 }
-.hero,
+
 .footer {
   background-color: #2f303a;
 }
@@ -108,13 +175,22 @@ body {
   font-size: 16px;
   line-height: 1.9;
 }
+
 .order:hover,
 .order:focus {
   background-color: #188ce8;
 }
 
 /* main Студия - Особенности */
+
+.features.list {
+  display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 .features-title {
+  margin-bottom: 10px;
+
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 14px;
@@ -122,28 +198,62 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.03em;
 }
+.features-list-item:not(:last-child) {
+  margin-right: 30px;
+}
 .features-disc {
   line-height: 1.7;
 }
 
 /* main Студия - Чем мы занимаемся */
+.promo {
+  text-align: center;
+}
+.promo.list.container {
+  padding-bottom: 94px;
+}
+
 .promo-caption,
 .team-caption {
+  margin-bottom: 50px;
+
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
 }
-
+.promo.list {
+  display: flex;
+  justify-content: space-between;
+}
+.promo-list-item-img {
+  display: block;
+}
 /* main Студия - Наша команда */
 .team {
-  background-color: #f5f4fa;
+  text-align: center;
+  background-color: var(--secondary-bgc);
 }
+.team-caption {
+  padding-top: 94px;
+}
+.team.list.container {
+  padding-bottom: 94px;
+}
+.team-list-item:not(:last-child) {
+  padding-right: 30px;
+}
+.team-list-item-img {
+  display: block;
+  margin-bottom: 30px;
+}
+
 .team-member {
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-bottom: 10px;
 }
 .team-post {
   font-size: 16px;
@@ -155,6 +265,9 @@ body {
 } */
 
 /* Footer */
+.block {
+  display: block;
+}
 .address {
   color: var(--accent-color-text);
   font-style: normal;
@@ -179,7 +292,7 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
-  background-color: #f5f4fa;
+  background-color: var(--secondary-bgc);
 }
 .active {
   color: var(--accent-color-text);
