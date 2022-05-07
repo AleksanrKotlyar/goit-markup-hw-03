@@ -275,8 +275,11 @@ img {
 }
 .team-list-item-descr {
   text-align: center;
+
   padding-top: 30px;
+  padding-right: 10px;
   padding-bottom: 30px;
+  padding-left: 10px;
 }
 
 .team-member {
